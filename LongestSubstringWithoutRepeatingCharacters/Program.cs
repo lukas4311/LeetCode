@@ -6,7 +6,8 @@ namespace LongestSubstringWithoutRepeatingCharacters
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Solution solution = new Solution();
+            solution.LengthOfLongestSubstring("");
         }
     }
 }
