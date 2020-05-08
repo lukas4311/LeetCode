@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LongestSubstringWithoutRepeatingCharacters
 {
@@ -57,6 +55,29 @@ namespace LongestSubstringWithoutRepeatingCharacters
 
                 totalMax = Math.Max(totalMax, j - i + 1);
                 charsIndex.Add(s[j], j);
+            }
+
+            return totalMax;
+        }
+
+        public int LengthOfLongestSubstring3(string s)
+        {
+            int totalMax = 0;
+            int[] charsIndex = new int[128];
+
+            int i = 0;
+            for (int j = 0; j < s.Length; j++)
+            {
+                if (charsIndex[s[j]] != 0)
+                {
+                    if (charsIndex[s[j]] > i)
+                    {
+                        i = charsIndex[s[j]];
+                    }
+                }
+
+                totalMax = Math.Max(totalMax, j - i + 1);
+                charsIndex[s[j]] = j + 1;
             }
 
             return totalMax;

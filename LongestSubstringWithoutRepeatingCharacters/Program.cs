@@ -7,7 +7,7 @@ namespace LongestSubstringWithoutRepeatingCharacters
         static void Main(string[] args)
         {
             Solution solution = new Solution();
-            int count = solution.LengthOfLongestSubstring2("tmmzuxt");
+            int count = solution.LengthOfLongestSubstring3("pwwkewuiovbne");
         }
     }
 }
