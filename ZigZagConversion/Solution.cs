@@ -30,15 +30,16 @@ namespace ZigZagConversion
                 return stringBuilder2.ToString();
             }
 
-            int specialColumns = numRows - 2;
             int columnDivident = s.Length;
 
             for (int i = 0; i < numRows + 1 - borderOfEmptyColumns; i++)
             {
-                columnDivident += ((s.Length - specialColumns) / (numRows + i + 1) * numRows);
+                int help1 = s.Length / (numRows + i + 1);
+                int emptyCharsCount = help1 * numRows - help1;
+                columnDivident += emptyCharsCount;
             }
 
-            int allColumns = Math.Max(columnDivident / numRows, 1);
+            int allColumns = Math.Max((int)Math.Ceiling(columnDivident / (double)numRows), 1);
             char[,] charMatrix = new char[numRows, allColumns];
 
             for (int j = 0; j < charMatrix.GetLength(1); j++)
