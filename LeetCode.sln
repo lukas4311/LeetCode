@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestSubstringWithoutRepe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZagConversion", "ZigZagConversion\ZigZagConversion.csproj", "{84044D54-C1E1-4EC1-9C38-5A2D62A625D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1DEDEC8A-85C1-4F42-8AA5-83096D24E9A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionTests", "SolutionTests\SolutionTests.csproj", "{B0C50FA1-9286-454F-9B1B-C9DC13471384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{84044D54-C1E1-4EC1-9C38-5A2D62A625D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84044D54-C1E1-4EC1-9C38-5A2D62A625D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84044D54-C1E1-4EC1-9C38-5A2D62A625D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C50FA1-9286-454F-9B1B-C9DC13471384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C50FA1-9286-454F-9B1B-C9DC13471384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C50FA1-9286-454F-9B1B-C9DC13471384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C50FA1-9286-454F-9B1B-C9DC13471384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0C50FA1-9286-454F-9B1B-C9DC13471384} = {1DEDEC8A-85C1-4F42-8AA5-83096D24E9A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64FAEB13-AE5D-4E66-A483-4BB1E48BE7C0}
