@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace ZigZagConversion
@@ -9,6 +10,26 @@ namespace ZigZagConversion
 
         public string Convert(string s, int numRows)
         {
+            if (numRows == 1)
+                return s;
+
+            if (numRows == 2)
+            {
+                StringBuilder stringBuilder2 = new StringBuilder();
+
+                for (int i = 0; i < s.Length; i += 2)
+                {
+                    stringBuilder2.Append(s[i]);
+                }
+
+                for (int i = 1; i < s.Length; i += 2)
+                {
+                    stringBuilder2.Append(s[i]);
+                }
+
+                return stringBuilder2.ToString();
+            }
+
             int specialColumns = numRows - 2;
             int columnDivident = s.Length;
 
@@ -17,14 +38,14 @@ namespace ZigZagConversion
                 columnDivident += ((s.Length - specialColumns) / (numRows + i + 1) * numRows);
             }
 
-            int allColumns = columnDivident / numRows;
+            int allColumns = Math.Max(columnDivident / numRows, 1);
             char[,] charMatrix = new char[numRows, allColumns];
 
             for (int j = 0; j < charMatrix.GetLength(1); j++)
             {
                 for (int i = 0; i < charMatrix.GetLength(0); i++)
                 {
-                    int actualStringIndex = j * (numRows - 1) + i;
+                    int actualStringIndex = j * 2 + i;
 
                     if (actualStringIndex >= s.Length)
                         break;
