@@ -40,11 +40,11 @@ namespace ZigZagConversion
             }
 
             int allColumns = Math.Max((int)Math.Ceiling(columnDivident / (double)numRows), 1);
-            char[,] charMatrix = new char[numRows, allColumns];
+            StringBuilder stringBuilder = new StringBuilder();
 
-            for (int j = 0; j < charMatrix.GetLength(0); j++)
+            for (int j = 0; j < numRows; j++)
             {
-                for (int i = 0; i < charMatrix.GetLength(1); i++)
+                for (int i = 0; i < allColumns; i++)
                 {
                     int actualStringIndex = j + i * 2;
 
@@ -53,7 +53,7 @@ namespace ZigZagConversion
 
                     if (i % (numRows - 1) == 0)
                     {
-                        charMatrix[j, i] = s[actualStringIndex];
+                        stringBuilder.Append(s[actualStringIndex]);
                     }
                     else
                     {
@@ -61,19 +61,9 @@ namespace ZigZagConversion
 
                         if (numRows - 1 - reminder == j)
                         {
-                            charMatrix[j, i] = s[actualStringIndex];
+                            stringBuilder.Append(s[actualStringIndex]);
                         }
                     }
-                }
-            }
-
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int j = 0; j < charMatrix.GetLength(0); j++)
-            {
-                for (int i = 0; i < charMatrix.GetLength(1); i++)
-                {
-                    if (charMatrix[j, i] != default(char))
-                        stringBuilder.Append(charMatrix[j, i]);
                 }
             }
 
