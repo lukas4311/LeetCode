@@ -42,29 +42,27 @@ namespace ZigZagConversion
             int allColumns = Math.Max((int)Math.Ceiling(columnDivident / (double)numRows), 1);
             char[,] charMatrix = new char[numRows, allColumns];
 
-            for (int j = 0; j < charMatrix.GetLength(1); j++)
+            for (int j = 0; j < charMatrix.GetLength(0); j++)
             {
-                for (int i = 0; i < charMatrix.GetLength(0); i++)
+                for (int i = 0; i < charMatrix.GetLength(1); i++)
                 {
-                    int actualStringIndex = j * 2 + i;
+                    int actualStringIndex = j + i * 2;
 
                     if (actualStringIndex >= s.Length)
                         break;
 
-                    if (j % (numRows - 1) == 0)
+                    if (i % (numRows - 1) == 0)
                     {
-                        charMatrix[i, j] = s[actualStringIndex];
+                        charMatrix[j, i] = s[actualStringIndex];
                     }
                     else
                     {
-                        int reminder = j % (numRows - 1);
+                        int reminder = i % (numRows - 1);
 
-                        if (i == (numRows - 1 - reminder))
+                        if (numRows - 1 - reminder == j)
                         {
-                            charMatrix[i, j] = s[actualStringIndex];
-                            break;
+                            charMatrix[j, i] = s[actualStringIndex];
                         }
-
                     }
                 }
             }
