@@ -8,7 +8,7 @@ namespace ZigZagConversion
         {
             Console.WriteLine("Hello World!");
             Solution solution = new Solution();
-            var res = solution.Convert("PAYPALISHIRING", 3);
+            var res = solution.Convert("123456789", 3);
         }
     }
 }

@@ -1,69 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace ZigZagConversion
 {
     public class Solution
     {
-        const int borderOfEmptyColumns = 3;
+        private const int firstAndLastRowCount = 2;
 
         public string Convert(string s, int numRows)
         {
             if (numRows == 1)
                 return s;
 
-            if (numRows == 2)
-            {
-                StringBuilder stringBuilder2 = new StringBuilder();
+            int firstLettersCountToNextIndex;
+            int secondLettersCountToNextIndex;
+            bool useFirstIncrement;
+            int j;
+            int letterCountInOneSequence = numRows * 2 - firstAndLastRowCount;
+            StringBuilder stringBuilder = new StringBuilder(s.Length);
 
-                for (int i = 0; i < s.Length; i += 2)
+            for (int i = 1; i <= numRows; i++)
+            {
+                j = i;
+
+                if (j == 1 || j == numRows)
                 {
-                    stringBuilder2.Append(s[i]);
+                    while (j <= s.Length)
+                    {
+                        stringBuilder.Append(s[j - 1]);
+                        j += letterCountInOneSequence;
+                    }
+
+                    continue;
                 }
 
-                for (int i = 1; i < s.Length; i += 2)
+                firstLettersCountToNextIndex = (numRows - j) * 2;
+                secondLettersCountToNextIndex = letterCountInOneSequence - firstLettersCountToNextIndex;
+                useFirstIncrement = true;
+
+                while (j <= s.Length)
                 {
-                    stringBuilder2.Append(s[i]);
-                }
-
-                return stringBuilder2.ToString();
-            }
-
-            int columnDivident = s.Length;
-
-            for (int i = 0; i < numRows + 1 - borderOfEmptyColumns; i++)
-            {
-                int help1 = s.Length / (numRows + i + 1);
-                int emptyCharsCount = help1 * numRows - help1;
-                columnDivident += emptyCharsCount;
-            }
-
-            int allColumns = Math.Max((int)Math.Ceiling(columnDivident / (double)numRows), 1);
-            StringBuilder stringBuilder = new StringBuilder();
-
-            for (int j = 0; j < numRows; j++)
-            {
-                for (int i = 0; i < allColumns; i++)
-                {
-                    int actualStringIndex = j + i * 2;
-
-                    if (actualStringIndex >= s.Length)
-                        break;
-
-                    if (i % (numRows - 1) == 0)
-                    {
-                        stringBuilder.Append(s[actualStringIndex]);
-                    }
-                    else
-                    {
-                        int reminder = i % (numRows - 1);
-
-                        if (numRows - 1 - reminder == j)
-                        {
-                            stringBuilder.Append(s[actualStringIndex]);
-                        }
-                    }
+                    stringBuilder.Append(s[j - 1]);
+                    j += useFirstIncrement ? firstLettersCountToNextIndex : secondLettersCountToNextIndex;
+                    useFirstIncrement = !useFirstIncrement;
                 }
             }
 
