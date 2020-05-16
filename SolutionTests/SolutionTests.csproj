@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LongestPalindromicSubstring\LongestPalindromicSubstring.csproj" />
     <ProjectReference Include="..\ZigZagConversion\ZigZagConversion.csproj" />
   </ItemGroup>
 
