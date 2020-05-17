@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using System;
 
 namespace LongestPalindromicSubstring
 {
@@ -6,9 +7,10 @@ namespace LongestPalindromicSubstring
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Solution solutiuon = new Solution();
-            solutiuon.LongestPalindrome("ababababababa");
+            //Console.WriteLine("Hello World!");
+            //Solution solutiuon = new Solution();
+            //solutiuon.LongestPalindrome("ababababababa");
+            var summary = BenchmarkRunner.Run<BenchmarkTest>();
         }
     }
 }

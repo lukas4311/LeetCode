@@ -1,9 +1,12 @@
-﻿using System;
+﻿using BenchmarkDotNet.Attributes;
+using System;
 
 namespace LongestPalindromicSubstring
 {
+    [MemoryDiagnoser]
     public class Solution
     {
+        [Benchmark(Baseline = true)]
         public string LongestPalindrome(string s)
         {
             if (s.Length <= 0)
@@ -64,7 +67,7 @@ namespace LongestPalindromicSubstring
 
                 i++;
 
-                if (longestPalindrome.Length > s.Length - i)
+                if (longestPalindrome.Length / 2 > s.Length - i + 1)
                     break;
             }
 
