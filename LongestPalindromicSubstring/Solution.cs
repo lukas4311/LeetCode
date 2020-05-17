@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using Microsoft.Diagnostics.Runtime;
 using System;
 
 namespace LongestPalindromicSubstring
@@ -12,7 +13,8 @@ namespace LongestPalindromicSubstring
             if (s.Length <= 0)
                 return string.Empty;
 
-            string longestPalindrome = s[0].ToString();
+            int startIndex = 0;
+            int lenghtToEnd = 1;
             int even;
             int odd;
 
@@ -56,22 +58,28 @@ namespace LongestPalindromicSubstring
 
                 if (even > odd)
                 {
-                    if (even * 2 > longestPalindrome.Length)
-                        longestPalindrome = s.Substring(i - even, even * 2);
+                    if (even * 2 > lenghtToEnd)
+                    {
+                        startIndex = i - even;
+                        lenghtToEnd = even * 2;
+                    }
                 }
                 else
                 {
-                    if (odd * 2 + 1 > longestPalindrome.Length)
-                        longestPalindrome = s.Substring(i - (odd), (odd) * 2 + 1);
+                    if (odd * 2 + 1 > lenghtToEnd)
+                    {
+                        startIndex = i - odd;
+                        lenghtToEnd = odd *2 + 1;
+                    }
                 }
 
                 i++;
 
-                if (longestPalindrome.Length / 2 > s.Length - i + 1)
+                if (lenghtToEnd / 2 > s.Length - i + 1)
                     break;
             }
 
-            return longestPalindrome;
+            return s.Substring(startIndex, lenghtToEnd);
         }
     }
 }
