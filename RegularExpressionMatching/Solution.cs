@@ -19,7 +19,7 @@ namespace RegularExpressionMatching
 
             for (int i = 0; i < p.Length; i++)
             {
-                if (p[i] == '*' && dp[0, i - 1])
+                if (p[i] == Asterix && dp[0, i - 1])
                 {
                     dp[0, i + 1] = true;
                 }
@@ -28,7 +28,7 @@ namespace RegularExpressionMatching
             {
                 for (int j = 0; j < p.Length; j++)
                 {
-                    if (p[j] == '.')
+                    if (p[j] == Dot)
                     {
                         dp[i + 1, j + 1] = dp[i, j];
                     }
@@ -36,9 +36,9 @@ namespace RegularExpressionMatching
                     {
                         dp[i + 1, j + 1] = dp[i, j];
                     }
-                    if (p[j] == '*')
+                    if (p[j] == Asterix)
                     {
-                        if (p[j - 1] != s[i] && p[j - 1] != '.')
+                        if (p[j - 1] != s[i] && p[j - 1] != Dot)
                         {
                             dp[i + 1, j + 1] = dp[i + 1, j - 1];
                         }
