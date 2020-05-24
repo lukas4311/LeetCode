@@ -19,13 +19,25 @@ namespace ReverseInteger
                 multiplicator = -1;
             }
 
-            char[] number = x.ToString().Reverse().ToArray();
+            int newVal;
 
-            if(int.TryParse(new string(number), out int parsedNumber)){
-                return parsedNumber * multiplicator;
+            while (x > 0)
+            {
+                newVal = result * 10 + x % 10;
+
+                if (newVal / 10 == result)
+                {
+                    result = newVal;
+                    x /= 10;
+                }
+                else
+                {
+                    return 0;
+                }
+
             }
 
-            return result;
+            return result * multiplicator;
         }
     }
 }

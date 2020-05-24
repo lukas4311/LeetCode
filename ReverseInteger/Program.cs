@@ -6,7 +6,12 @@ namespace ReverseInteger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Solution reverse number");
+
+            Solution solution = new Solution();
+            int reversedNumber = solution.Reverse(2147483647);
+
+            Console.WriteLine(reversedNumber);
         }
     }
 }
