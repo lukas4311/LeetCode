@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionTests", "SolutionTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestPalindromicSubstring", "LongestPalindromicSubstring\LongestPalindromicSubstring.csproj", "{C00C2033-C886-49EB-A9C3-A1B4346F4847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseInteger", "ReverseInteger\ReverseInteger.csproj", "{F643A4C9-5504-4544-94A7-A8699535D421}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseInteger", "ReverseInteger\ReverseInteger.csproj", "{F643A4C9-5504-4544-94A7-A8699535D421}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionMatching", "RegularExpressionMatching\RegularExpressionMatching.csproj", "{344B4DC1-7654-44FB-A4D9-0F18946D3181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressionMatching", "RegularExpressionMatching\RegularExpressionMatching.csproj", "{344B4DC1-7654-44FB-A4D9-0F18946D3181}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestCommonPrefix", "LongestCommonPrefix\LongestCommonPrefix.csproj", "{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{344B4DC1-7654-44FB-A4D9-0F18946D3181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{344B4DC1-7654-44FB-A4D9-0F18946D3181}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{344B4DC1-7654-44FB-A4D9-0F18946D3181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
