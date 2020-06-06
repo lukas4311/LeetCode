@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseInteger", "ReverseIn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressionMatching", "RegularExpressionMatching\RegularExpressionMatching.csproj", "{344B4DC1-7654-44FB-A4D9-0F18946D3181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestCommonPrefix", "LongestCommonPrefix\LongestCommonPrefix.csproj", "{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestCommonPrefix", "LongestCommonPrefix\LongestCommonPrefix.csproj", "{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerWithMostWater", "ContainerWithMostWater\ContainerWithMostWater.csproj", "{4DF432C5-E56C-420C-BDDA-057636B13873}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF432C5-E56C-420C-BDDA-057636B13873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF432C5-E56C-420C-BDDA-057636B13873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF432C5-E56C-420C-BDDA-057636B13873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF432C5-E56C-420C-BDDA-057636B13873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
