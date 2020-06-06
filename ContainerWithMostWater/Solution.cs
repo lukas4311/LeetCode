@@ -15,35 +15,26 @@ namespace ContainerWithMostWater
             }
 
             int maxWaterArea = 0;
-            int minHeight;
-            int maxFoundHeight = 0;
+            int leftPointerIndex = 0;
+            int rightPointerIndex = height.Length - 1;
+            int area;
 
-            for (int i = 0; i < height.Length - 1; i++)
+            while (leftPointerIndex < rightPointerIndex)
             {
-                if (height[i] < maxFoundHeight)
+                area = (rightPointerIndex - leftPointerIndex) * Math.Min(height[leftPointerIndex], height[rightPointerIndex]);
+
+                if (maxWaterArea < area)
                 {
-                    continue;
+                    maxWaterArea = area;
+                }
+
+                if (height[leftPointerIndex] < height[rightPointerIndex])
+                {
+                    leftPointerIndex += 1;
                 }
                 else
                 {
-                    maxFoundHeight = height[i];
-                }
-
-                for (int j = i + 1; j < height.Length; j++)
-                {
-                    if (height[i] > height[j])
-                    {
-                        minHeight = height[j];
-                    }
-                    else
-                    {
-                        minHeight = height[i];
-                    }
-
-                    if (maxWaterArea < minHeight * (j - i))
-                    {
-                        maxWaterArea = minHeight * (j - i);
-                    }
+                    rightPointerIndex -= 1;
                 }
             }
 
