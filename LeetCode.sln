@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressionMatching",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestCommonPrefix", "LongestCommonPrefix\LongestCommonPrefix.csproj", "{CD1FF9B7-0080-4CFD-B341-3EAF3FB39A1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerWithMostWater", "ContainerWithMostWater\ContainerWithMostWater.csproj", "{4DF432C5-E56C-420C-BDDA-057636B13873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerWithMostWater", "ContainerWithMostWater\ContainerWithMostWater.csproj", "{4DF432C5-E56C-420C-BDDA-057636B13873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanToNumber", "RomanToNumber\RomanToNumber.csproj", "{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{4DF432C5-E56C-420C-BDDA-057636B13873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DF432C5-E56C-420C-BDDA-057636B13873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DF432C5-E56C-420C-BDDA-057636B13873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
