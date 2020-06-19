@@ -15,7 +15,7 @@ namespace RomanToNumber
             ,{'L', new RomanCharacter{ Value = 50, SpecialCharacterValue = null  }}
             ,{'C', new RomanCharacter{ Value = 100, SpecialCharacterValue = new []{ ('D', 400), ('M', 900) }  }}
             ,{'D', new RomanCharacter{ Value = 500, SpecialCharacterValue = null  }}
-            ,{'M', new RomanCharacter{ Value = 1000, SpecialCharacterValue =null }}
+            ,{'M', new RomanCharacter{ Value = 1000, SpecialCharacterValue = null }}
         };
 
         struct RomanCharacter

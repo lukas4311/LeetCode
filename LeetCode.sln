@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongestCommonPrefix", "Long
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerWithMostWater", "ContainerWithMostWater\ContainerWithMostWater.csproj", "{4DF432C5-E56C-420C-BDDA-057636B13873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanToNumber", "RomanToNumber\RomanToNumber.csproj", "{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanToNumber", "RomanToNumber\RomanToNumber.csproj", "{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToInteger(atoi)", "StringToInteger(atoi)\StringToInteger(atoi).csproj", "{A6EFEE95-23DA-47FB-A678-AC4B7BC73CD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1EC0E7A-D4B2-40F6-9DAA-96EA043D2D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6EFEE95-23DA-47FB-A678-AC4B7BC73CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6EFEE95-23DA-47FB-A678-AC4B7BC73CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6EFEE95-23DA-47FB-A678-AC4B7BC73CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6EFEE95-23DA-47FB-A678-AC4B7BC73CD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
