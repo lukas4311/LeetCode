@@ -7,51 +7,43 @@ namespace NumberOfNodesInTheSubTreeWithTheSameLabel
     {
         public int[] CountSubTrees(int n, int[][] edges, string labels)
         {
-            Node[] nodes = new Node[n];
-            nodes[0] = new Node
-            {
-                letter = labels[0],
-                subNodes = new List<Node>(),
-                subnodeLetters = new List<char> { labels[0] }
-            };
+            List<List<int>> adj = new List<List<int>>(n);
 
-            for (int i = 1; i <= edges.Length; i++)
-            {
-                nodes[i] = new Node
-                {
-                    letter = labels[i],
-                    subNodes = new List<Node>(),
-                    subnodeLetters = new List<char> { labels[i] }
-                };
-            }
+            for (int i = 0; i < n; i++)
+                adj.Add(new List<int>());
 
             for (int i = 0; i < edges.Length; i++)
             {
-                nodes[edges[i][0]].subNodes.Add(nodes[edges[i][1]]);
+                adj[edges[i][0]].Add(edges[i][1]);
+                adj[edges[i][1]].Add(edges[i][0]);
             }
 
-            int[] result = new int[n];
-
-            for (int i = nodes.Length - 1; i >= 0; i--)
-            {
-                foreach (Node node in nodes[i].subNodes)
-                {
-                    nodes[i].subnodeLetters.AddRange(node.subnodeLetters);
-                }
-
-                result[i] = nodes[i].subnodeLetters.Count(d => d == nodes[i].letter);
-            }
-
-            return result;
+            int[] ans = new int[n];
+            int[] visited = new int[n];
+            Dfs(adj, 0, labels, visited, ans);
+            return ans;
         }
 
-        struct Node
+        private int[] Dfs(List<List<int>> adj, int root, string labels, int[] visited, int[] ans)
         {
-            public List<Node> subNodes;
+            if (visited[root] == 1)
+                return new int[26];
 
-            public char letter;
+            int[] charCount = new int[26];
+            charCount[labels[root] - 'a']++;
+            visited[root] = 1;
 
-            public List<char> subnodeLetters;
+            for (int i = 0; i < adj[root].Count; i++)
+            {
+                int[] chCnt = Dfs(adj, adj[root][i], labels, visited, ans);
+
+                for (int j = 0; j < 26; j++)
+                    charCount[j] += chCnt[j];
+            }
+
+            ans[root] = charCount[labels[root] - 'a'];
+
+            return charCount;
         }
     }
 }
