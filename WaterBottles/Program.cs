@@ -6,7 +6,8 @@ namespace WaterBottles
     {
         static void Main(string[] args)
         {
-            
+            Solution solution = new Solution();
+            int bottlesToDrink = solution.NumWaterBottles(15, 4);
         }
     }
 }
